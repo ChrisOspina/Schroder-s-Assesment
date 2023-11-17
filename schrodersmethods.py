@@ -69,7 +69,7 @@ class Methods:
         #@param1 dataset: the raw dataset
         #@param2 strategy: the fund strategy to filter the data by
         def heatmap_pivot(dataset, strategy):
-                latest_data = dataset[dataset['Quarter-Year'] == '4/1/2023']
+                latest_data = dataset[dataset['Quarter/Year (Asset Date)'] == '4/1/2023']
                 latest_data_filtered = latest_data[latest_data['Fund Strategy'] == '${strategy}']
 
                 heatmap_pivot = pd.pivot_table(
